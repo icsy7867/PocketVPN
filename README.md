@@ -8,7 +8,7 @@ sudo chmod +x install.sh
 ```
 
 You should not see any errors.
-##lso make sure to set ipv4 forwarding!
+Also make sure to set ipv4 forwarding!
 
 ```
 run as root: (May need to sudo su)
@@ -32,7 +32,7 @@ Please streamline your openvpn configs by including your TLS and CA certificates
 Additionally please also include the auth file in your ovpn configs.
 
 Your ovpn files should have this structure at the end of them
-
+```
 auth-user-pass /var/www/html/openvpn/auth
 key-direction 1
 <tls-auth>
@@ -49,3 +49,4 @@ Key here
 CA Cert(s) here
 -----END CERTIFICATE-----
 </ca>
+```
