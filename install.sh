@@ -14,8 +14,8 @@ cd ../hostap
 echo ''
 echo ''
 
-sleep 100
+sleep 1
 
 echo 'Complete!'
-sleep 100
+sleep 1
 echo 'Please run echo 1 > /proc/sys/net/ipv4/ip_forward as root if you have not done so already'
