@@ -1,0 +1,25 @@
+Please streamline your openvpn configs by including your TLS and CA certificates within you .ovpn file.
+
+Additionally please also include the auth file in your ovpn configs.
+
+Your ovpn files should have this structure at the end of them
+
+auth-user-pass /var/www/html/openvpn/auth
+key-direction 1
+<tls-auth>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+Key here
+-----END OpenVPN Static key V1-----
+</tls-auth>
+
+<ca>
+-----BEGIN CERTIFICATE-----
+CA Cert(s) here
+-----END CERTIFICATE-----
+</ca>
+
+Also after pulling make sure to
+sudo chmod +x install.sh in the root directory
