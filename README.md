@@ -1,6 +1,6 @@
 Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
 
-#Installation
+# Installation
 ```
 git clone https://github.com/ICANSEEYOU7687/PocketVPN
 cd PocketVpn
@@ -22,9 +22,11 @@ Default Username: admin
 Default Password: 1234567890
 (Please change in settings in the web gui)
 ```
-
+```
 Also set your VPN provider Username/Password in the settings.
+```
 
+# Additional Notes
 Please streamline your openvpn configs by including your TLS and CA certificates within you .ovpn file.
 
 Additionally please also include the auth file in your ovpn configs.
