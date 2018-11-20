@@ -23,8 +23,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 #echo "iface br0 inet manual" >> /etc/network/interfaces
 #echo "bridge_ports eth0 wlan0" >> /etc/network/interfaces
 
-iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
-sh -c "iptables-save > /etc/iptables.ipv4.nat"
-
+#iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
+#sh -c "iptables-save > /etc/iptables.ipv4.nat"
+cp iptables.record /etc/iptables.ipv4.nat
 
 cp starthostapd.sh /var/www/html/scripts/starthostapd.sh
