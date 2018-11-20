@@ -1,0 +1,35 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Generate the SSH keys if non-existent
+ssh-keygen -A
+
+#ip addr add 192.168.4.1/24 broadcast 192.168.4.255 dev wlan0
+#iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+
+nmcli radio wifi off
+rfkill unblock wlan
+nmcli radio wifi on
+
+/var/www/html/scripts/Channel_Select.sh
+/var/www/html/scripts/starthostapd.sh 1
+
+#iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+#Allow forwarding from wifi to tun0
+#iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+#ip route add 192.168.4.0/24 dev wlan0
+
+iptables-restore < /etc/iptables.ipv4.nat
+
+exit 0

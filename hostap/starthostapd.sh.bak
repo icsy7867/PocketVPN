@@ -1,0 +1,8 @@
+#!/bin/bash
+nmcli radio wifi off
+rfkill unblock wifi
+systemctl stop dnsmasq
+systemctl stop hostapd
+systemctl start dnsmasq
+systemctl start hostapd
+
