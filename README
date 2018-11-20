@@ -1,3 +1,22 @@
+Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
+Also after pulling make sure to
+sudo chmod +x install.sh in the root directory
+
+then run sudo ./install.sh
+
+You should not see any errors.
+Also make sure to set ipv4 forwarding!
+
+run as root: (May need to sudo su)
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+Once installed, connect a web browser to client:
+http://192.168.4.1
+
+Default Username: admin
+Default Password: 1234567890
+(Please change in settings in the web gui)
+
 Please streamline your openvpn configs by including your TLS and CA certificates within you .ovpn file.
 
 Additionally please also include the auth file in your ovpn configs.
@@ -20,14 +39,3 @@ Key here
 CA Cert(s) here
 -----END CERTIFICATE-----
 </ca>
-
-Also after pulling make sure to
-sudo chmod +x install.sh in the root directory
-
-then run sudo ./install.sh
-
-You should not see any errors.
-Also make sure to set ipv4 forwarding!
-
-run as root: (May need to sudo su)
-echo 1 > /proc/sys/net/ipv4/ip_forward
