@@ -5,6 +5,7 @@ Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
 git clone https://github.com/ICANSEEYOU7687/PocketVPN
 cd PocketVpn
 sudo chmod +x install.sh
+sudo ./install.sh
 ```
 
 You should not see any errors.
