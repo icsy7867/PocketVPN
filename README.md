@@ -1,5 +1,6 @@
 Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
-** Should work on Raspberry Pi, but untested **
+
+**Should work on Raspberry Pi, but untested 
 
 # Installation
 ```
