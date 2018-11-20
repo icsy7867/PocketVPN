@@ -1,12 +1,15 @@
 #!/bin/bash
 echo 'Installing apache and dependencies'
-./website/install.sh
+
+cd website
+./install.sh
 
 echo ''
 echo ''
 
 echo 'Installing hostapd, copying config files and setting up NAT'
-./hostap/install.sh
+cd ../hostap
+./install.sh
 
 echo ''
 echo ''
