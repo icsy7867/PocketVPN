@@ -17,6 +17,8 @@ Default Username: admin
 Default Password: 1234567890
 (Please change in settings in the web gui)
 
+Also set your VPN provider Username/Password in the settings.
+
 Please streamline your openvpn configs by including your TLS and CA certificates within you .ovpn file.
 
 Additionally please also include the auth file in your ovpn configs.
