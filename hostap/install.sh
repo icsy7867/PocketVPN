@@ -14,6 +14,7 @@ cp resolv.dnsmasq.conf /etc/resolv.dnsmasq.conf
 cp Channel_Select.sh /var/www/html/scripts/Channel_Select.sh
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
+sysctl -w net.ipv4.ip_forward=1
 
 #brctl addbr br0
 #brctl addif br0 eth0
