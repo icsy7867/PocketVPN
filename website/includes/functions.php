@@ -86,7 +86,7 @@ function ListVPNFiles() {
 }
 
 function GetPublicIP() {
-	usleep(600000);
+	usleep(100000);
         $externalContent = file_get_contents("http://ipecho.net/plain");
         $externalIp = $externalContent;
 	if ( $externalIp ){
