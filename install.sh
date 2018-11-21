@@ -1,4 +1,10 @@
 #!/bin/bash
+
+echo 'Updating Apt...'
+apt-get update
+
+echo ''
+
 echo 'Installing apache and dependencies'
 
 cd website
