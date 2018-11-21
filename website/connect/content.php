@@ -16,6 +16,7 @@ if(isset($_POST['files'])) { $files = $_POST['files']; } else { $data_error = tr
 if(isset($_POST['OldIP'])) { $OldIP = $_POST['OldIP']; } else { $data_error = true;}
 if( isset($_POST['files']) ){
 	$connect = TunnelConnect("$files");
+	sleep(2);
 	$PubIP = GetPublicIP();
 	if ($connect){ 
 		echo "Successfully Connected!  For more information, please check the Status or Information pages. <br><br>";
