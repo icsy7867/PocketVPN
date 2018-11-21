@@ -18,4 +18,4 @@ sleep 1
 
 echo 'Complete!'
 sleep 1
-echo 'Please run echo 1 > /proc/sys/net/ipv4/ip_forward as root if you have not done so already'
+echo 'Please uncomment net.ipv4.ip_forward=1 in /etc/sysctl.conf and reboot!'
