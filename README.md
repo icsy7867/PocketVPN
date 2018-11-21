@@ -44,7 +44,7 @@ Additionally please also include the auth file in your ovpn configs.
 Your ovpn files should have this structure at the end of them
 ```
 auth-user-pass /var/www/html/openvpn/auth
-key-direction 1
+key-direction 1 #this may or may not be needed depending on the OpenVPN server.
 <tls-auth>
 #
 # 2048 bit OpenVPN static key
