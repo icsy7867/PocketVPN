@@ -14,9 +14,9 @@ You should not see any errors.
 Also make sure to set ipv4 forwarding!
 
 ```
-run as root: (May need to sudo su)
-echo 1 > /proc/sys/net/ipv4/ip_forward
+Please uncomment net.ipv4.ip_forward=1 in /etc/sysctl.conf and reboot!
 ```
+
 ```
 Once installed, connect a web browser to client:
 http://192.168.4.1
