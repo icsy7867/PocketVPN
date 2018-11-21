@@ -1,6 +1,11 @@
 Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
-
 **Should work on Raspberry Pi, but untested 
+
+![alt text](https://i.imgur.com/gIFD5Ra.png "Status Page")
+
+![alt text](https://i.imgur.com/2SgqK3r.png "Settings Page")
+
+![alt text](https://i.imgur.com/XLpTIWD.png "Information Page")
 
 # Installation
 ```
