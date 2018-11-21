@@ -33,7 +33,9 @@ Default Password: 1234567890
 ```
 Also set your VPN provider Username/Password in the settings.
 ```
-
+```
+You should be able to see "PocketVPN" SSID on your devices.  Default wifi password is 1234567890
+```
 # Additional Notes
 Please streamline your openvpn configs by including your TLS and CA certificates within you .ovpn file.
 
