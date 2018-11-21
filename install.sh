@@ -5,13 +5,11 @@ cd website
 ./install.sh
 
 echo ''
-echo ''
 
 echo 'Installing hostapd, copying config files and setting up NAT'
 cd ../hostap
 ./install.sh
 
-echo ''
 echo ''
 
 sleep 1
