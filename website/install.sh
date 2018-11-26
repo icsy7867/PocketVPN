@@ -31,6 +31,7 @@ echo "www-data ALL = (root) NOPASSWD: /var/www/html/openvpn/connect.sh" >> /etc/
 echo "www-data ALL = (root) NOPASSWD: /var/www/html/openvpn/disconnect.sh" >> /etc/sudoers
 echo "www-data ALL = (root) NOPASSWD: /var/www/html/scripts/webpass.sh" >> /etc/sudoers
 echo "www-data ALL = (root) NOPASSWD: /usr/bin/htpasswd" >> /etc/sudoers
+echo "www-data ALL = (root) NOPASSWD: /bin/ping" >> /etc/sudoers
 echo "www-data ALL = (root) NOPASSWD: /var/www/html/scripts/power.sh" >> /etc/sudoers
 
 echo "copying website files over..."
