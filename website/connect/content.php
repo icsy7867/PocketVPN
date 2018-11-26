@@ -12,6 +12,13 @@
           <p>
 
 <?php
+
+$external_test = PingTest();
+if ( !$external_test ){
+        echo "Warning! External Connection not detected.  Please verify ethernet cable is connected.";
+}
+
+		  
 if(isset($_POST['files'])) { $files = $_POST['files']; } else { $data_error = true;}
 if(isset($_POST['OldIP'])) { $OldIP = $_POST['OldIP']; } else { $data_error = true;}
 if( isset($_POST['files']) ){
