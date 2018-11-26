@@ -43,7 +43,7 @@ function TunnelConnect($server) {
 	while ( !VerifyTunnel("tun") ) { 
 		usleep(500000);
 		$count++;
-			if ( $count == 25 ) { break; } 
+			if ( $count == 28 ) { break; } 
 	}
 	usleep(200000);
 	return VerifyTunnel("tun");
