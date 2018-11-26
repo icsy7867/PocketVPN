@@ -15,7 +15,7 @@
 
 
         $connect = TunnelDisconnect();
-
+        usleep(500000);
         if( $connect ){
            echo "All openvpn processes have been terminated.";
         } else {
