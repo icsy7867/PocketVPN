@@ -84,6 +84,14 @@ function ListVPNFiles() {
 	return $files;
 
 }
+function PingTest() {
+        $output = shell_exec("sudo /bin/ping -q -c 1 -W 1 8.8.8.8 >/dev/null && echo 'Success'");
+        if ( $output ){
+          return 1;
+        } else {
+          return 0;
+        }
+}
 
 function GetPublicIP() {
 	usleep(100000);
