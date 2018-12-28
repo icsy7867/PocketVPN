@@ -21,7 +21,7 @@ ARRAY[7]=$(echo "$Command" | grep -c -o '\(Channel 7\)')
 ARRAY[8]=$(echo "$Command" | grep -c -o '\(Channel 8\)')
 ARRAY[9]=$(echo "$Command" | grep -c -o '\(Channel 9\)')
 ARRAY[10]=$(echo "$Command" | grep -c -o '\(Channel 10\)')
-#ARRAY[11]=$(echo "$Command" | grep -c -o '\(Channel 11\)')
+ARRAY[11]=$(echo "$Command" | grep -c -o '\(Channel 11\)')
 
 #Get frequencies of neighboring WIFI
 Command=$(iwlist wlan0 scan | grep Frequency:2.4 | sort | sort -n)
@@ -37,7 +37,7 @@ ARRAY[7]=$((ARRAY[7]+$(echo "$Command" | grep -c -o '\(Channel 7\)')))
 ARRAY[8]=$((ARRAY[8]+$(echo "$Command" | grep -c -o '\(Channel 8\)')))
 ARRAY[9]=$((ARRAY[9]+$(echo "$Command" | grep -c -o '\(Channel 9\)')))
 ARRAY[10]=$((ARRAY[10]+$(echo "$Command" | grep -c -o '\(Channel 10\)')))
-#ARRAY[11]=$((ARRAY[11]+$(echo "$Command" | grep -c -o '\(Channel 11\)')))
+ARRAY[11]=$((ARRAY[11]+$(echo "$Command" | grep -c -o '\(Channel 11\)')))
 
 #Echo posistion of smallest entry
 Position=$(echo "${ARRAY[@]}" | tr -s ' ' '\n' | awk '{print($0" "NR)}' | sort -g -k1,1 | head -1 | cut -f2 -d' ')
