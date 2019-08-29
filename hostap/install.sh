@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get install hostapd dnsmasq wireless-tools
+apt-get install hostapd dnsmasq wireless-tools iptables-persistent
 
 
 echo "auto wlan0" >> /etc/network/interfaces
