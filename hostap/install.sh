@@ -30,3 +30,7 @@ ip addr del 169.254.47.93/16 dev wlan0
 cp iptables.record /etc/iptables.ipv4.nat
 
 cp starthostapd.sh /var/www/html/scripts/starthostapd.sh
+
+#systemctl unmask hostapd
+#systemctl enable hostapd
+#systemctl start hostapd
