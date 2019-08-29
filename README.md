@@ -9,7 +9,7 @@ Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
 
 # Installation
 ```
-git clone https://github.com/ICANSEEYOU7687/PocketVPN
+git clone https://github.com/icsy7867/PocketVPN
 cd PocketVpn
 sudo chmod +x install.sh
 sudo ./install.sh
