@@ -27,8 +27,9 @@ ip addr del 169.254.47.93/16 dev wlan0
 
 iptables -t nat -A  POSTROUTING -o eth0 -j MASQUERADE
 #sh -c "iptables-save > /etc/iptables.ipv4.nat"
-cp iptables.record /etc/iptables.ipv4.nat
+#cp iptables.record /etc/iptables.ipv4.nat
 
+cp rules.v4 /etc/iptables/rules.v4
 cp starthostapd.sh /var/www/html/scripts/starthostapd.sh
 
 systemctl unmask hostapd
