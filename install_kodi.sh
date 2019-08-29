@@ -3,6 +3,8 @@ cp /usr/share/applications/kodi.desktop /etc/xdg/autostart/z-kodi.desktop
 
 wget -q https://github.com/CastagnaIT/plugin.video.netflix/archive/master.zip
 sudo apt-get install -q python-crypto
+apt-get install -q -y build-essential python-pip libnss3 libnspr4
+
 sudo pip install -q -U setuptools
 sudo pip install -q wheel
 sudo pip install -q pycryptodomex==3.8.2
