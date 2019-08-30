@@ -9,7 +9,10 @@ sudo apt install python-crypto-dbg python-crypto-doc python-pip-whl -y
 
 sudo pip install -q -U setuptools
 sudo pip install -q wheel
-sudo pip install -q pycryptodomex==3.8.2
+#sudo pip install -q pycryptodomex==3.8.2
+#run "pip install --user pycryptodomex" as user who runs KODI
+#https://github.com/asciidisco/plugin.video.netflix
+
 
 wget https://github.com/kodinerds/repo/raw/master/repository.netflix/repository.netflix-1.0.1.zip
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_armhf.deb
