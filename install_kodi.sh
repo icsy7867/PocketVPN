@@ -11,6 +11,6 @@ sudo pip install -q -U setuptools
 sudo pip install -q wheel
 sudo pip install -q pycryptodomex==3.8.2
 
-
+wget https://github.com/kodinerds/repo/raw/master/repository.netflix/repository.netflix-1.0.1.zip
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_armhf.deb
 dpkg -i emby-server-deb_4.2.1.0_armhf.deb
