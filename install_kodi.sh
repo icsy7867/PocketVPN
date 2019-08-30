@@ -1,7 +1,7 @@
-#apt-get install kodi
+apt-get install kodi
 #https://www.omgubuntu.co.uk/2019/01/install-kodi-on-ubuntu-linux
-add-apt-repository ppa:team-xbmc/ppa
-sudo apt update && sudo apt install kodi
+#add-apt-repository ppa:team-xbmc/ppa
+#sudo apt update && sudo apt install kodi
 
 cp /usr/share/applications/kodi.desktop /etc/xdg/autostart/z-kodi.desktop
 
