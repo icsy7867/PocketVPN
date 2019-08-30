@@ -15,7 +15,7 @@
 
 $external_test = PingTest();
 if ( !$external_test ){
-        echo "Warning! External Connection not detected.  Please verify ethernet cable is connected.";
+        echo "Warning! External Connection not detected.  Please verify ethernet cable is connected.<br>";
 }
 
 		  
