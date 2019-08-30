@@ -1,4 +1,8 @@
-apt-get install kodi
+#apt-get install kodi
+#https://www.omgubuntu.co.uk/2019/01/install-kodi-on-ubuntu-linux
+add-apt-repository ppa:team-xbmc/ppa
+sudo apt update && sudo apt install kodi
+
 cp /usr/share/applications/kodi.desktop /etc/xdg/autostart/z-kodi.desktop
 
 wget -q https://github.com/CastagnaIT/plugin.video.netflix/archive/master.zip
@@ -14,6 +18,6 @@ sudo pip install -q wheel
 #https://github.com/asciidisco/plugin.video.netflix
 
 
-wget https://github.com/kodinerds/repo/raw/master/repository.netflix/repository.netflix-1.0.1.zip
-wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_armhf.deb
-dpkg -i emby-server-deb_4.2.1.0_armhf.deb
+#wget https://github.com/kodinerds/repo/raw/master/repository.netflix/repository.netflix-1.0.1.zip
+#wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_armhf.deb
+#dpkg -i emby-server-deb_4.2.1.0_armhf.deb
