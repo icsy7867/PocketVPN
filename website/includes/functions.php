@@ -85,7 +85,7 @@ function ListVPNFiles() {
 
 }
 function PingTest() {
-        $output = shell_exec("sudo /bin/ping -q -c 1 -W 1 google.com >/dev/null && echo 'Success'");
+        $output = shell_exec("sudo /bin/ping -4 -q -c 1 -W 1 google.com >/dev/null && echo 'Success'");
         if ( $output ){
           return 1;
         } else {
