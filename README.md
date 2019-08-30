@@ -1,5 +1,4 @@
-Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7
-**Should work on Raspberry Pi, but untested 
+Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7 and Raspberry Pi 4
 
 ![alt text](https://i.imgur.com/gIFD5Ra.png "Status Page")
 
