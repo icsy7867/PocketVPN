@@ -58,7 +58,8 @@ Key here
 CA Cert(s) here
 -----END CERTIFICATE-----
 </ca>
-```
 script-security 2
 up /etc/openvpn/update-resolv-conf
 down /etc/openvpn/update-resolv-conf
+```
+
