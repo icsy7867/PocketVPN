@@ -1,4 +1,4 @@
-Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7 and Raspberry Pi 4
+Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7 and Raspberry Pi 4 Buster
 
 ![alt text](https://i.imgur.com/gIFD5Ra.png "Status Page")
 
