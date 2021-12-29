@@ -1,3 +1,8 @@
+Not working yet with docker
+To try:
+https://fwhibbit.es/en/automatic-access-point-with-docker-and-raspberry-pi-zero-w
+
+
 Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7 and Raspberry Pi 4 Buster
 
 ![alt text](https://i.imgur.com/gIFD5Ra.png "Status Page")
