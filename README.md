@@ -6,6 +6,8 @@ https://github.com/simonschuang/rpi-hostapd
 https://hub.docker.com/r/dperson/openvpn-client/tags
 https://hub.docker.com/r/pihole/pihole
 
+Pass /sys/class/thermal/thermal_zone0/temp and zone1 to website container 
+
 
 Tested on Mikerr's Tinkerboard 2.0.4 and 2.0.7 and Raspberry Pi 4 Buster
 
