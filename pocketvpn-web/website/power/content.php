@@ -18,10 +18,10 @@ if(isset($_POST['power'])) { $power = $_POST['power'];	} else { $data_error = tr
 if( isset($_POST['power']) ) {
 	if( $power == "reboot" ) {
 		echo "Rebooting...";
-		power(reboot);
+		power("reboot");
 	} elseif ( $power == "shutdown" ) {
 		echo "Shutting Down...";
-		power(shutdown);
+		power("shutdown");
 	} else {
 		echo "Something went wrong...";
 	}

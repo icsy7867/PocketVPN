@@ -1,0 +1,29 @@
+FROM php:7.4-apache
+
+COPY ./website/installation_files/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./website /var/www/html
+
+RUN chown -R www-data:root /var/www/html \
+	&& rm -rf /var/www/html/installation_files \
+	&& mkdir /httpaccess
+
+
+RUN apt update && apt install -y sudo ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+RUN echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+RUN apt update && apt install docker-ce-cli
+
+RUN echo "www-data ALL = (root) NOPASSWD: /var/www/html/openvpn/connect.sh" >> /etc/sudoers && \
+echo "www-data ALL = (root) NOPASSWD: /var/www/html/openvpn/disconnect.sh" >> /etc/sudoers && \
+echo "www-data ALL = (root) NOPASSWD: /var/www/html/scripts/webpass.sh" >> /etc/sudoers && \
+echo "www-data ALL = (root) NOPASSWD: /usr/bin/htpasswd" >> /etc/sudoers && \
+echo "www-data ALL = (root) NOPASSWD: /bin/ping" >> /etc/sudoers && \
+echo "www-data ALL = (root) NOPASSWD: /var/www/html/scripts/power.sh" >> /etc/sudoers && \
+/usr/bin/htpasswd -b -c /httpaccess/.htpasswd admin 1234567890
+
