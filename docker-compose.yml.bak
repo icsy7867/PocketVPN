@@ -1,0 +1,42 @@
+version: "3"
+
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+#     dhcp provided by hostap container
+#      - "67:67/udp"
+      - "8082:80/tcp"
+    environment:
+      TZ: 'America/Chicago'
+      DHCP_ACTIVE: 'false'
+      # WEBPASSWORD: 'set a secure password here or it will be random'
+    # Volumes store your data between container upgrades
+    volumes:
+      - '/etc/PocketVPN/pihole/etc-pihole/:/etc/pihole/'
+      - '/etc/PocketVPN/dnsmasq/:/etc/dnsmasq.d/'
+    restart: unless-stopped
+
+  hostapd:
+    container_name: hostapd
+    image: autowlan
+    environment:
+      INTERFACE: 'wlan0'
+      OUTGOINGS: 'eth0'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    restart: unless-stopped
+    privileged: true
+    network_mode: "host"
+
+  pocketvpn-web:
+    container_name: pocketvpn-web
+    image: apachetest
+    restart: unless-stopped
+    privileged: true
+    network_mode: "host"
+

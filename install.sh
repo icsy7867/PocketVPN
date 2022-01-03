@@ -1,6 +1,10 @@
 #!/bin/bash
 ###Create PocketVPN Directories
 mkdir -p /etc/PocketVPN/openvpn/config
+mkdir -p /etc/PocketVPN/pihole/etc-pihole
+mkdir -p /etc/PocketVPN/pihole/dnsmasq
+mkfifo /etc/PocketVPN/pocket-pipe
+
 cp -R ./openvpn_config_template/. /etc/PocketVPN/openvpn/config
 
 if [ ! -f /etc/PocketVPN/openvpn/auth ]
