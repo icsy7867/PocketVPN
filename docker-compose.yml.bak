@@ -37,6 +37,10 @@ services:
     container_name: pocketvpn-web
     image: apachetest
     restart: unless-stopped
-    privileged: true
-    network_mode: "host"
-
+    ports: 
+      - "8080:80/tcp"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/etc/PocketVPN/openvpn/config:/var/www/html/openvpn/config"      
+      - "/etc/PocketVPN/openvpn/auth:/var/www/html/openvpn/auth"
+      - "/etc/PocketVPN/pocket-pipe:/pocket-pipe"

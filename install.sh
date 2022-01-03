@@ -6,6 +6,7 @@ mkdir -p /etc/PocketVPN/pihole/dnsmasq
 mkfifo /etc/PocketVPN/pocket-pipe
 
 cp -R ./openvpn_config_template/. /etc/PocketVPN/openvpn/config
+cp ./listen-pipe.sh /etc/PocketVPN
 
 if [ ! -f /etc/PocketVPN/openvpn/auth ]
 then
