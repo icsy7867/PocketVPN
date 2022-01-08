@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build . -t apachetest
+docker build . -t pocketvpn-web

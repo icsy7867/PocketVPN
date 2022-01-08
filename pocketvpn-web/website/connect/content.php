@@ -62,7 +62,7 @@ if( isset($_POST['files']) ){
 	";
     } if ( (isset($_POST['files']) && !VerifyTunnel("tun")) ) {
 	echo "<br>Something went wrong... Try disconnecting from the menu";
-	$connect = TunnelDisconnect();
+	//$connect = TunnelDisconnect();
     }
 ?>
 </p>

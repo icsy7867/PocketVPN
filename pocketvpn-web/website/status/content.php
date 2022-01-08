@@ -16,6 +16,7 @@
                 		echo "<strong>Currently Connected using:</strong> <br>";
                 		$content = file('../openvpn/openvpn_connect.log');
                                 echo "<strong>$content[0]</strong><br><br>";
+				fclose($content);
 				$TunStat =  TunnelStatus();
 				foreach ( $TunStat as $value){ echo "$value <br>"; }
         		} else {

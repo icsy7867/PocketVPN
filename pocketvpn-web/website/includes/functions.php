@@ -38,7 +38,7 @@ function APStatus() {
 }
 
 function TunnelConnect($server) {
-	$output = shell_exec("sudo -b ./../openvpn/connect.sh $server  > ../openvpn/openvpn_connect.log 2>&1 &> /dev/null 2>&1 &");
+	$output = shell_exec("sudo -b ./../openvpn/connect.sh $server &");
 	$count  = 0;
 	while ( !VerifyTunnel("tun") ) { 
 		usleep(500000);
@@ -50,7 +50,7 @@ function TunnelConnect($server) {
 }
 
 function TunnelDisconnect() {
-	$output = shell_exec("sudo -b ./../openvpn/disconnect.sh > ../openvpn/openvpn_connect.log 2>&1 &> /dev/null 2>&1 &");
+	$output = shell_exec("sudo -b ./../openvpn/disconnect.sh &");
 	$count  = 0;
 	while ( VerifyTunnel("tun") ) { 
 		usleep(500000);

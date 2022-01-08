@@ -14,7 +14,8 @@ services:
     environment:
       TZ: 'America/Chicago'
       DHCP_ACTIVE: 'false'
-      # WEBPASSWORD: 'set a secure password here or it will be random'
+      ServerIP: '192.168.254.1'
+      WEBPASSWORD: '1234567890'
     # Volumes store your data between container upgrades
     volumes:
       - '/etc/PocketVPN/pihole/etc-pihole/:/etc/pihole/'
@@ -30,12 +31,14 @@ services:
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
     restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
     privileged: true
-#    network_mode: "host"
+    network_mode: "host"
 
   pocketvpn-web:
     container_name: pocketvpn-web
-    image: apachetest
+    image: pocketvpn-web
     restart: unless-stopped
     ports: 
       - "8080:80/tcp"
@@ -44,3 +47,4 @@ services:
       - "/etc/PocketVPN/openvpn/config:/var/www/html/openvpn/config"      
       - "/etc/PocketVPN/openvpn/auth:/var/www/html/openvpn/auth"
       - "/etc/PocketVPN/pocket-pipe:/pocket-pipe"
+      - "/etc/PocketVPN/openvpn/log:/var/www/html/openvpn/openvpn_connect.log"

@@ -1,0 +1,8 @@
+[Unit]
+Description=PocketVPN Pipe Listener
+
+[Service]
+ExecStart=/etc/PocketVPN/listen-pipe.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo killall openvpn
-
+#sudo killall openvpn
+echo "openvpn_disconnect true" > /pocket-pipe &
 #ufw --force reset
 #ufw default deny incoming
 #ufw default allow outgoing

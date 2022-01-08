@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [ "$1" -eq "0" ]; then
-   shutdown -r now;
+   echo "reboot 0" > /pocket-pipe
    exit;
 fi
 
 if [ "$1" -eq "1" ]; then
-   shutdown -h now;
+   echo "shutdown 1" > /pocket-pipe
    exit;
 fi
