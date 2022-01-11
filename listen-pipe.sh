@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Clean old containers and re-initialize
+docker stop vpn
+docker rm vpn
+docker-compose -f /etc/PocketVPN/docker-compose.yml down
+docker-compose -f /etc/PocketVPN/docker-compose.yml up --detach
+
 while true
 do
 	cat /etc/PocketVPN/pocket-pipe | while read command output
@@ -17,19 +24,39 @@ do
 			#	dperson/openvpn-client -r 192.168.254.0/24
 			#/usr/bin/sh /etc/PocketVPN/openvpn/iptables-init.sh
 			echo "$command $output"
-			/usr/sbin/openvpn --config /etc/PocketVPN/openvpn/config/${output} --log /etc/PocketVPN/openvpn/log --daemon &
 			echo "======================="
 			echo "Openvpn Process Started"
 			echo "======================="
+			echo "${output}" > /etc/PocketVPN/openvpn/log
+			echo "Starting OpenVPN Process using /etc/PocketVPN/openvpn/config/${output}"
+			/usr/sbin/openvpn --config /etc/PocketVPN/openvpn/config/${output} --log /etc/PocketVPN/openvpn/log --daemon &
 		;;
 		openvpn_disconnect)
 			docker stop vpn
 			docker rm vpn
 			#/usr/bin/sh /etc/PocketVPN/openvpn/iptables-restore.sh
-			#killall openvpn
+			killall openvpn
 			echo "======================="
 			echo "Openvpn Process Stopped"
 			echo "======================="
+		;;
+		reboot)
+			echo "======================="
+			echo "       Rebooting       "
+			echo "======================="
+			docker-compose down
+			docker stop vpn
+			docker rm vpn
+			shutdown -r now
+		;;
+		shutdown)
+			echo "======================="
+			echo "        Shutdown       "
+			echo "======================="
+			docker-compose down
+			docker stop vpn
+			docker rm vpn
+			shutdown -h now
 		;;
 	   esac
 	done
