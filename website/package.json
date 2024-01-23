@@ -28,7 +28,7 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-sb-admin.git"
     },
     "dependencies": {
-        "bootstrap": "4.0.0",
+        "bootstrap": "4.3.1",
         "chart.js": "2.9.4",
         "datatables.net-bs4": "1.10.16",
         "font-awesome": "4.7.0",
